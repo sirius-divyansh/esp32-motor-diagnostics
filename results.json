@@ -1,0 +1,117 @@
+{
+  "dataset": {
+    "windows": 540,
+    "runs": 90,
+    "train_runs": 72,
+    "test_runs": 18
+  },
+  "training_augmentation": "wide",
+  "aug_cv": {
+    "none": {
+      "clean": 0.9857142857142858,
+      "noise50": 0.9185714285714285,
+      "moderate": 0.9165079365079365,
+      "harsh": 0.8615873015873016
+    },
+    "moderate": {
+      "clean": 0.9723809523809525,
+      "noise50": 0.9396825396825397,
+      "moderate": 0.9395238095238095,
+      "harsh": 0.8715873015873015
+    },
+    "harsh": {
+      "clean": 0.9714285714285713,
+      "noise50": 0.8953968253968254,
+      "moderate": 0.9603174603174605,
+      "harsh": 0.8849206349206348
+    },
+    "wide": {
+      "clean": 0.9723809523809525,
+      "noise50": 0.971904761904762,
+      "moderate": 0.950952380952381,
+      "harsh": 0.8712698412698412
+    }
+  },
+  "chosen": {
+    "trees": 20,
+    "depth": 4,
+    "acc": 0.9434920634920635,
+    "acc_clean": 0.9714285714285713,
+    "acc_mod": 0.9580952380952381,
+    "acc_harsh": 0.8753968253968253,
+    "bytes": 5260,
+    "nodes": 340
+  },
+  "test": {
+    "clean": {
+      "correct": 108,
+      "total": 108,
+      "acc": 1.0,
+      "ci95": [
+        0.9656514212958325,
+        0.9999999999999998
+      ]
+    },
+    "noise50": {
+      "correct": 108,
+      "total": 108,
+      "acc": 1.0,
+      "ci95": [
+        0.9656514212958325,
+        0.9999999999999998
+      ]
+    },
+    "moderate": {
+      "correct": 104,
+      "total": 108,
+      "acc": 0.9629629629629629,
+      "ci95": [
+        0.9086169931912852,
+        0.9855046931937449
+      ]
+    },
+    "harsh": {
+      "correct": 102,
+      "total": 108,
+      "acc": 0.9444444444444444,
+      "ci95": [
+        0.884064198126811,
+        0.9742926208028179
+      ]
+    }
+  },
+  "parity": {
+    "windows": 432,
+    "model_only_agree": 432,
+    "end_to_end_agree": 432,
+    "cpp_end_to_end_correct": 422,
+    "py_correct": 422,
+    "feat_err_median_fullscale": 2.61883091990223e-11,
+    "feat_err_max_fullscale": 1.9446171917927617e-05,
+    "worst_feature": "mean_A"
+  },
+  "resources": {
+    "model_flash_bytes": 5260,
+    "nodes": 340,
+    "leaves": 180,
+    "trees": 20,
+    "max_depth": 4,
+    "ram_static_bytes": 49152,
+    "window_seconds": 0.4096,
+    "approx_flops": 282624,
+    "tree_comparisons_max": 80
+  },
+  "features": [
+    "mean_A",
+    "E_2.5-10Hz",
+    "E_10-18Hz",
+    "E_18-22Hz",
+    "E_22-26Hz",
+    "E_26-32Hz",
+    "E_32-45Hz",
+    "E_45-70Hz",
+    "E_70-120Hz",
+    "E_120-200Hz",
+    "peak_excess_18-32Hz"
+  ]
+}
